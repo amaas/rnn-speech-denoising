@@ -75,7 +75,7 @@ end;
 
 % DROPOUT: vector of length of hidden layers with 0 or 1 
 % (to drop or keep activation unit) with prob=0.5
-hActToDrop = cell(numel(eI.layerSizes-1),1);
+hActToDrop = cell(numel(eI.layerSizes),1);
 for i=1:numel(eI.layerSizes)-1
  if eI.dropout
    hActToDrop{i} = round(rand(eI.layerSizes(i),1));
